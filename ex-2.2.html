@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Media Links Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+        }
+
+        .media-links {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .media-links img {
+            width: 150px;
+            height: 150px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .media-links img:hover {
+            transform: scale(1.1);
+        }
+
+        .download-links {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .download-links a {
+            font-size: 1.2rem;
+            color: #2980b9;
+            text-decoration: none;
+            border: 1px solid #2980b9;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .download-links a:hover {
+            background-color: #2980b9;
+            color: white;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>Media Links: Images for Navigation and Downloads</h2>
+    </header>
+
+    <section class="media-links">
+        <!-- Navigation on Image Click -->
+        <a href="home.html">
+            <img src="home-image.jpg" alt="Home Page">
+            <p>Go to Home Page</p>
+        </a>
+
+        <a href="about.html">
+            <img src="about-image.jpg" alt="About Us">
+            <p>About Us</p>
+        </a>
+
+        <a href="contact.html">
+            <img src="contact-image.jpg" alt="Contact Us">
+            <p>Contact Us</p>
+        </a>
+    </section>
+
+    <section class="download-links">
+        <!-- Download Links -->
+        <h3>Download Files</h3>
+        <p><a href="sample-document.pdf" download>Click here to download the PDF document</a></p>
+        <p><a href="sample-image.jpg" download>Click here to download the image</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 MediaLinks Example | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

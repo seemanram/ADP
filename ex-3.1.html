@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GourmetDelights Restaurant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 0 15px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #34495e;
+        }
+
+        .cuisine-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+
+        .cuisine-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 150px;
+            cursor: pointer;
+        }
+
+        .cuisine-item h3 {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: #e67e22;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        table th, table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #2980b9;
+            color: white;
+        }
+
+        table td {
+            font-size: 1rem;
+        }
+
+        table tr:last-child td {
+            border-bottom: none;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>GourmetDelights Restaurant</h1>
+        <p>Your Culinary Journey Awaits</p>
+    </header>
+
+    <section id="cuisines">
+        <h2>Our Cuisines</h2>
+        <div class="cuisine-list">
+            <div class="cuisine-item">
+                <img src="italian.jpg" alt="Italian Cuisine" width="120" height="120">
+                <h3>Italian</h3>
+            </div>
+            <div class="cuisine-item">
+                <img src="chinese.jpg" alt="Chinese Cuisine" width="120" height="120">
+                <h3>Chinese</h3>
+            </div>
+            <div class="cuisine-item">
+                <img src="mexican.jpg" alt="Mexican Cuisine" width="120" height="120">
+                <h3>Mexican</h3>
+            </div>
+            <div class="cuisine-item">
+                <img src="indian.jpg" alt="Indian Cuisine" width="120" height="120">
+                <h3>Indian</h3>
+            </div>
+            <div class="cuisine-item">
+                <img src="american.jpg" alt="American Cuisine" width="120" height="120">
+                <h3>American</h3>
+            </div>
+            <div class="cuisine-item">
+                <img src="japanese.jpg" alt="Japanese Cuisine" width="120" height="120">
+                <h3>Japanese</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="daily-specials">
+        <h2>Today's Specials</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dish Name</th>
+                    <th>Ingredients</th>
+                    <th>Price</th>
+                    <th>Calories</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Spaghetti Carbonara</td>
+                    <td>Pasta, Eggs, Bacon, Parmesan</td>
+                    <td>$14.99</td>
+                    <td>750</td>
+                </tr>
+                <tr>
+                    <td>Sweet & Sour Chicken</td>
+                    <td>Chicken, Pineapple, Bell Peppers, Vinegar</td>
+                    <td>$12.99</td>
+                    <td>600</td>
+                </tr>
+                <tr>
+                    <td>Tacos al Pastor</td>
+                    <td>Pork, Pineapple, Onion, Cilantro, Corn Tortilla</td>
+                    <td>$9.99</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>Butter Chicken</td>
+                    <td>Chicken, Butter, Cream, Spices</td>
+                    <td>$16.99</td>
+                    <td>800</td>
+                </tr>
+                <tr>
+                    <td>Cheeseburger</td>
+                    <td>Beef Patty, Cheese, Lettuce, Tomato, Bun</td>
+                    <td>$10.99</td>
+                    <td>950</td>
+                </tr>
+                <tr>
+                    <td>Sushi Rolls</td>
+                    <td>Rice, Seaweed, Fish, Vegetables</td>
+                    <td>$18.99</td>
+                    <td>400</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 GourmetDelights | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
