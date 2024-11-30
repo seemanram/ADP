@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arkham Asylum Prisoner Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .prisoner {
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+        }
+        .prisoner:last-child {
+            border-bottom: none;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Arkham Asylum Prisoner Report</h1>
+<div class="container" id="reportContainer">
+    <!-- Dynamic prisoner reports will be inserted here -->
+</div>
+<button onclick="addPrisoner()">Add Random Prisoner</button>
+
+<script>
+    const prisoners = [
+        {
+            name: "The Joker",
+            crime: "Mass Murder",
+            image: "https://i.pinimg.com/736x/bf/26/38/bf26382e85e29848e835f74411ce6b7b.jpg"
+        },
+        {
+            name: "Bane",
+            crime: "Assault",
+            image: "https://images6.alphacoders.com/892/892810.jpg" },
+        {
+            name: "Two-Face",
+            crime: "Robbery",
+            image: "https://artfiles.alphacoders.com/140/thumb-1920-140023.jpg"
+        },
+        {
+            name: "Scarecrow",
+            crime: "Terrorism",
+            image: "https://imgcdn.stablediffusionweb.com/2024/10/23/8ff74711-8913-44da-8627-59808ef3f1a3.jpg"    }
+    ];
+
+    function addPrisoner() {
+        const randomIndex = Math.floor(Math.random() * prisoners.length);
+        const prisoner = prisoners[randomIndex];
+        const reportContainer = document.getElementById('reportContainer');
+
+        const prisonerDiv = document.createElement('div');
+        prisonerDiv.className = 'prisoner';
+        prisonerDiv.innerHTML = `
+            <h2>${prisoner.name}</h2>
+            <p>Crime: ${prisoner.crime}</p>
+            <img src="${prisoner.image}" alt="${prisoner.name}">
+        `;
+        reportContainer.appendChild(prisonerDiv);
+    }
+</script>
+
+</body>
+</html>

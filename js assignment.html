@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<head>
+    
+    <title>Simple E-Commerce Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: red;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #cart {
+            float: right;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            background-color: #222;
+        }
+
+        .product button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .product button:hover {
+            background-color: darkred;
+        }
+
+        footer {
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .order-button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .order-button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My E-Commerce Store</h1>
+        <div id="cart">
+            <span>Cart: <span id="cart-count">0</span> items</span>
+        </div>
+    </header>
+    
+    <main>
+        <section id="products">
+            <div class="product">
+                <h2>Product 1</h2>
+                <p>Price: $10</p>
+                <button onclick="addToCart('Product 1', 10)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h2>Product 2</h2>
+                <p>Price: $20</p>
+                <button onclick="addToCart('Product 2', 20)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h2>Product 3</h2>
+                <p>Price: $30</p>
+                <button onclick="addToCart('Product 3', 30)">Add to Cart</button>
+            </div>
+        </section>
+        <button class="order-button" onclick="redirectToOrderPage()">Proceed to Order</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My E-Commerce Store</p>
+    </footer>
+
+    <script>
+        let cartCount = 0;
+
+        function addToCart(productName, price) {
+            cartCount++;
+            document.getElementById('cart-count').innerText = cartCount;
+            alert(`${productName} has been added to your cart!`);
+        }
+
+        function redirectToOrderPage() {
+            if (cartCount > 0) {
+                alert('Redirecting to the order page...');
+                // Here you would typically redirect to another page. 
+                // For demonstration, we'll just use an alert.
+                window.location.href = 'order.html'; // Change this to your actual order page URL
+            } else {
+                alert('Your cart is empty! Please add items to your cart before proceeding to order.');
+            }
+        }
+    </script>
+</body>
+</html>
