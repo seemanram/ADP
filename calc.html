@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gradient Button Calculator</title>
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                background-color: #f3f4f6;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            .calculator-container {
+                background: #ffffff;
+                border-radius: 12px;
+                padding: 20px 30px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                width: 350px;
+                text-align: center;
+            }
+
+            h3 {
+                margin-bottom: 20px;
+                color: #333;
+            }
+
+            label {
+                display: block;
+                font-size: 14px;
+                margin-bottom: 5px;
+                color: #555;
+            }
+
+            input[type="text"] {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ddd;
+                border-radius: 6px;
+                font-size: 14px;
+                box-sizing: border-box;
+            }
+
+            .buttons-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+
+            .button {
+                padding: 10px;
+                font-size: 16px;
+                border: none;
+                border-radius: 8px;
+                color: #fff;
+                cursor: pointer;
+                transition: transform 0.2s, box-shadow 0.2s;
+                background: linear-gradient(45deg, #ff6f61, #ff9966);
+            }
+
+            .button:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            }
+
+            .button:nth-child(2) {
+                background: linear-gradient(45deg, #6a11cb, #2575fc);
+            }
+
+            .button:nth-child(3) {
+                background: linear-gradient(45deg, #42e695, #3bb2b8);
+            }
+
+            .button:nth-child(4) {
+                background: linear-gradient(45deg, #f7971e, #ffd200);
+            }
+        </style>
+        <script>
+            function add() {
+                let a = document.getElementById("fn").value;
+                let b = document.getElementById("sn").value;
+                let c = parseInt(a) + parseInt(b);
+                window.alert("Sum is: " + c);
+            }
+
+            function sub() {
+                let a = document.getElementById("fn").value;
+                let b = document.getElementById("sn").value;
+                let c = parseInt(a) - parseInt(b);
+                window.alert("Subtraction is: " + c);
+            }
+
+            function mul() {
+                let a = document.getElementById("fn").value;
+                let b = document.getElementById("sn").value;
+                let c = parseInt(a) * parseInt(b);
+                window.alert("Multiplication is: " + c);
+            }
+
+            function div() {
+                let a = document.getElementById("fn").value;
+                let b = document.getElementById("sn").value;
+                let c = parseInt(a) / parseInt(b);
+                window.alert("Division is: " + c);
+            }
+        </script>
+    </head>
+    <body>
+        <div class="calculator-container">
+            <h3>Calculator</h3>
+            <form>
+                <label for="fn">Enter First Number:</label>
+                <input type="text" id="fn" placeholder="First number">
+
+                <label for="sn">Enter Second Number:</label>
+                <input type="text" id="sn" placeholder="Second number">
+
+                <div class="buttons-container">
+                    <button type="button" class="button" onclick="add()">Add</button>
+                    <button type="button" class="button" onclick="sub()">Subtract</button>
+                    <button type="button" class="button" onclick="mul()">Multiply</button>
+                    <button type="button" class="button" onclick="div()">Divide</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
