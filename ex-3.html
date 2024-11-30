@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalistic Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        ul.fruit-list {
+            list-style-type: none; /* Remove bullet points */
+            padding: 0; /* Remove padding */
+        }
+
+        ul.fruit-list li {
+            padding: 8px;
+            border-bottom: 1px solid #ddd; /* Add a bottom border */
+        }
+
+        ul.fruit-list li:last-child {
+            border-bottom: none; /* Remove border from the last item */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Merge borders */
+            margin-top: 20px;
+            border: 2px solid #333; /* Border around the table */
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #333; /* Border for table cells */
+        }
+
+        table th {
+            background-color: #f4f4f4; /* Light background for header */
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9; /* Alternate row color */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Minimalistic Page</h1>
+        
+        <section>
+            <h2>Favorite Fruits</h2>
+            <ul class="fruit-list">
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Cherry</li>
+                <li>Date</li>
+                <li>Elderberry</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Fruit Nutritional Information</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fruit</th>
+                        <th>Calories (per 100g)</th>
+                        <th>Vitamin C (mg)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Apple</td>
+                        <td>52</td>
+                        <td>4.6</td>
+                    </tr>
+                    <tr>
+                        <td>Banana</td>
+                        <td>89</td>
+                        <td>8.7</td>
+                    </tr>
+                    <tr>
+                        <td>Cherry</td>
+                        <td>50</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>Date</td>
+                        <td>277</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Elderberry</td>
+                        <td>73</td>
+                        <td>36</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
