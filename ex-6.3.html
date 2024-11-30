@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Park Map</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Welcome to the Park</h1>
+<p>Click on the zones below to learn more about their attractions!</p>
+
+<!-- Image Map -->
+<img src="https://www.shutterstock.com/image-vector/childish-amusement-park-top-view-600nw-2340151667.jpg" alt="Park Map" usemap="#parkmap">
+
+<map name="parkmap">
+    <!-- Rectangle for Playground -->
+    <area shape="rect" coords="50,50,200,150" href="playground.html" alt="Playground" title="Playground">
+    
+    <!-- Circle for Picnic Area -->
+    <area shape="circle" coords="300,100,50" href="picnic-area.html" alt="Picnic Area" title="Picnic Area">
+    
+    <!-- Polygon for Lake -->
+    <area shape="poly" coords="400,200,450,250,400,300,350,250" href="lake.html" alt="Lake" title="Lake">
+    
+    <!-- Rectangle for Sports Zone -->
+    <area shape="rect" coords="100,300,250,400" href="sports-zone.html" alt="Sports Zone" title="Sports Zone">
+</map>
+
+</body>
+</html>
